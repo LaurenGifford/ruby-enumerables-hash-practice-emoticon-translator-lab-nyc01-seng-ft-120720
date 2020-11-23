@@ -12,8 +12,8 @@ def load_library(path)
  #  binding.pry
    describe.each do |emoticon|
      if emoticon == describe[0]
-       describe[:english] = emoticon
        binding.pry
+       describe[:english] = emoticon
      end
        if emoticon == describe[1]
          describe[:japanese] = emoticon
