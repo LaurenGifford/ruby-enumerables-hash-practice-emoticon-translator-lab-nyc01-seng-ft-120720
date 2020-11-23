@@ -5,10 +5,11 @@ require "yaml"
 def load_library(path)
   feelings = {"get_meaning" => {}, "get_emoticon" => {}}
   emoticons_original = YAML.load_file(path)
-  binding.pry
+#  binding.pry
   emoticons_original.each do |meaning, describe| 
-    
- #   binding.pry
+    feelings["get_menaing"] = meaning
+    feelings["get_emoticon"] = describe
+   binding.pry
       end
  # binding.pry
   emoticons
