@@ -1,14 +1,16 @@
 # require modules here
 
-# require 'pry'
+ require 'pry'
 require "yaml"
 def load_library(path)
   emoticons_lib = YAML.load_file(path)
   emoticons = {"get_meaning" => {}, "get_emoticon" => {}}
   emoticons_lib.each do |meaning, emojis|
-    meaning = meaning.to_sym
+    english = emojis[0]
+    japanese = emojis[1]
     emoticons["get_meaning"][meaning] = {:english => emojis[0], :japanese => emojis[1]}
-    emoticons["get_emoticon"][meaning] = {:english => emojis[0], :japanese => emojis[1]}
+    emoticons["get_emoticon"][english] = japanese
+    binding.pry
    end
 #    binding.pry
   return emoticons
