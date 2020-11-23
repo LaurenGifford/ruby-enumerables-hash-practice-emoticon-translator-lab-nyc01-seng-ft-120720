@@ -24,7 +24,9 @@ end
 # emoji_hash["get_meaning"][emojis[1]] = word
 # emoji_hash["get_emoticon"][emojis[0]] = emojis[1]
 
-#
+# emoticon_hash["get_meaning"][emoticon_set.last] = english_word
+#  emoticon_hash["get_emoticon"][emoticon_set.first] = emoticon_set.last
+
 #emoticons = { emotion1 => {:english => translation, :japanese => translation}, emotion2 {}}
 
 
