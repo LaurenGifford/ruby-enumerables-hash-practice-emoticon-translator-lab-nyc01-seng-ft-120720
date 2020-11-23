@@ -14,9 +14,6 @@ def load_library(path)
 end
 
 # hash = Hash[array.collect{|symbol| ["", symbol]}]
-
-#   emoji_hash["get_meaning"][emojis[1]] = word
-#   emoji_hash["get_emoticon"][emojis[0]] = emojis[1]
 #return ex 
 #emoticons = { emotion1 => {:english => translation, :japanese => translation}, emotion2 {}}
 
@@ -24,10 +21,15 @@ end
 
 def get_japanese_emoticon(path, emoticon)
   emoji = load_library(path)
+  if emoticons
+  else "Sorry, that emoticon was not found"
+  end
   # code goes here
 end
 
 def get_english_meaning(path, emoticon)
   emoji = load_library(path)
+  if emoticons
+  else "Sorry, that emoticon was not found"
   # code goes here
 end
