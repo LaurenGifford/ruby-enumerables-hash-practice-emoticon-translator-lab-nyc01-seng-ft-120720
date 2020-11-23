@@ -4,10 +4,13 @@
 require "yaml"
 def load_library(path)
   emoticons_lib = YAML.load_file(path)
-  emoticons = { "get_meaning" => {}, "get_emoticon" => {}}
+  emoticons = {}
+  "get_meaning" = emoticons[meaning][:english]
+  "get_emoticon" = emoticons[meaning][:japanese]
+  
   emoticons_lib.each do |meaning, emojis|
-      :english = emojis[0]
-      :japanese = emojis[1]
+    emoticons.push(meaning => {:english => emojis[0], :japanese => emojis[1]})
+    
     emoticons["get_meaning"][emojis[1]] = meaning
     emoticons["get_emoticon"][emojis[0]] = emojis[1]
      end
@@ -16,17 +19,14 @@ def load_library(path)
 end
 
 # hash = Hash[array.collect{|symbol| ["", symbol]}]
-#      eng, jan = describe
-#     emoticons["get_meaning"][jan] = meaning
-#     emoticons["get_emoticon"][eng] = jan
+# mine: emoticons["get_meaning"][emojis[1]] = meaning
+#       emoticons["get_emoticon"][emojis[0]] = emojis[1]
 
-# emoji_hash["get_meaning"][emojis[1]] = word
-# emoji_hash["get_emoticon"][emojis[0]] = emojis[1]
+# ref1: emoji_hash["get_meaning"][emojis[1]] = word
+#       emoji_hash["get_emoticon"][emojis[0]] = emojis[1]
 
-# emoticon_hash["get_meaning"][emoticon_set.last] = english_word
-#  emoticon_hash["get_emoticon"][emoticon_set.first] = emoticon_set.last
-
-#emoticons = { emotion1 => {:english => translation, :japanese => translation}, emotion2 {}}
+# ref2: emoticon_hash["get_meaning"][emoticon_set.last] = english_word
+#       emoticon_hash["get_emoticon"][emoticon_set.first] = emoticon_set.last
 
 
 
