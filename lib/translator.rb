@@ -9,10 +9,15 @@ def load_library(path)
   emoticons_original.each do |meaning, describe| 
     feelings["get_meaning"] = meaning
     feelings["get_emoticon"] = describe
-   binding.pry
+ #  binding.pry
+   describe each do |emoticon|
+     if emoticon == describe[0]
+       
+       
+   end
       end
  # binding.pry
-  emoticons
+  feelings
 end
 
 # hash = Hash[array.collect{|symbol| ["", symbol]}]
