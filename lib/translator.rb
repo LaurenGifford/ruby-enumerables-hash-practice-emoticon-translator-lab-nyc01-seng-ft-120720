@@ -8,8 +8,7 @@ def load_library(path)
   emoticons["get_meaning"] = {}, 
   emoticons["get_emoticon"] = {}
   emoticons_lib.each do |meaning, emojis|
-    
-    eng, jap = emojis
+
     emoticons["get_meaning"][emojis[1]] = meaning
     emoticons["get_emoticon"][emojis[0]] = emojis[1]
      end
@@ -21,9 +20,11 @@ end
 #      eng, jan = describe
 #     emoticons["get_meaning"][jan] = meaning
 #     emoticons["get_emoticon"][eng] = jan
+
 # emoji_hash["get_meaning"][emojis[1]] = word
 # emoji_hash["get_emoticon"][emojis[0]] = emojis[1]
-#return ex 
+
+#
 #emoticons = { emotion1 => {:english => translation, :japanese => translation}, emotion2 {}}
 
 
