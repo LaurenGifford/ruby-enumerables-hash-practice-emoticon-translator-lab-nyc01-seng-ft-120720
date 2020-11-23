@@ -1,6 +1,6 @@
 # require modules here
 
-#require 'pry'
+require 'pry'
 require "yaml"
 def load_library(path)
   emoticons = {"get_meaning" => {}, "get_emoticon" => {}}
@@ -9,7 +9,7 @@ def load_library(path)
     emoticons["get_meaning"][emojis[1]] = meaning
     emoticons["get_emoticon"][emojis[0]] = japanese
      end
- #    binding.pry
+    binding.pry
   emoticons
 end
 
