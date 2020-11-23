@@ -7,7 +7,7 @@ def load_library(path)
   emoticons_original = YAML.load_file(path)
   binding.pry
   emoticons_original.each do |meaning, describe| 
-    emoticons[meaning] = describe
+    
  #   binding.pry
       end
     end
