@@ -29,7 +29,7 @@ end
 def get_japanese_emoticon(path, emoticon)
   emoji = load_library(path)
   if emoticons["get_emoticon"].has_key?(emoticon)
-    emoticons["get_emoticon"][emo]
+    emoticons["get_emoticon"][emoticon]
   else "Sorry, that emoticon was not found"
   end
   # code goes here
