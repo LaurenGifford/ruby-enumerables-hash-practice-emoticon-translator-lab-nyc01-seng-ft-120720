@@ -8,11 +8,10 @@ def load_library(path)
   emoticons_lib.each do |meaning, emojis|
     emoticons[meaning] = {:english => emojis[0], :japanese => emojis[1]}
      end
-     binding.pry
-#  "get_meaning" = emoticons[meaning][:english]
-#  "get_emoticon" = emoticons[meaning][:japanese]
+  "get_meaning" = emoticons[meaning][:english]
+  "get_emoticon" = emoticons[meaning][:japanese]
   
- #   binding.pry
+    binding.pry
   return emoticons
 end
 
