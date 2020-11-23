@@ -3,12 +3,14 @@
 require 'pry'
 require "yaml"
 def load_library(path)
-  feelings = {"get_meaning" => {}, "get_emoticon" => {}}
-  emoticons_original = YAML.load_file(path)
+  emoticons = {"get_meaning" => {}, "get_emoticon" => {}}
+  emoticons_lib = YAML.load_file(path)
 #  binding.pry
-  emoticons_original.each do |meaning, describe| 
-    feelings["get_meaning"] = meaning
-    feelings["get_emoticon"] = describe
+  emoticons_lib.each do |meaning, describe| 
+    english = 
+    japanese = 
+    emoticons["get_meaning"] = meaning
+    emoticons["get_emoticon"] = describe
  #  binding.pry
    describe.each do |emoticon|
      if emoticon == describe[0]
@@ -20,8 +22,7 @@ def load_library(path)
        end
      end
   end
- # binding.pry
-  feelings
+  emoticons
 end
 
 # hash = Hash[array.collect{|symbol| ["", symbol]}]
