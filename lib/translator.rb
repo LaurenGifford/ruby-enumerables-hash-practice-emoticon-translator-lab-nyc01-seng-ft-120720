@@ -12,10 +12,14 @@ def load_library(path)
  #  binding.pry
    describe each do |emoticon|
      if emoticon == describe[0]
-       
-       
-   end
-      end
+       describe[:english] = emoticon
+       binding.pry
+     end
+       if emoticon == describe[1]
+         describe[:japanese] = emoticon
+       end
+     end
+  end
  # binding.pry
   feelings
 end
