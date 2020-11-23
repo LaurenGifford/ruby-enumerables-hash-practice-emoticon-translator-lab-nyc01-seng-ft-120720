@@ -6,7 +6,8 @@ def load_library(path)
   emoticons_lib = YAML.load_file(path)
   emoticons = {}
   emoticons_lib.each do |meaning, emojis|
-    emoticons.push(meaning => {:english => emojis[0], :japanese => emojis[1]})
+    meaning = :meaning
+    emoticons.push(:meaning => {:english => emojis[0], :japanese => emojis[1]})
     binding.pry
      end
   "get_meaning" = emoticons[meaning][:english]
