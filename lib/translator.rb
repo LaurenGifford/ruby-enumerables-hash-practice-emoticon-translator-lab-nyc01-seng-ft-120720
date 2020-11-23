@@ -7,21 +7,12 @@ def load_library(path)
   emoticons_lib = YAML.load_file(path)
 #  binding.pry
   emoticons_lib.each do |meaning, describe| 
-    english = 
-    japanese = 
+    english = describe[0]
+    japanese = describe [1]
     emoticons["get_meaning"] = meaning
     emoticons["get_emoticon"] = describe
  #  binding.pry
-   describe.each do |emoticon|
-     if emoticon == describe[0]
-       binding.pry
-       describe[:english] = emoticon
      end
-       if emoticon == describe[1]
-         describe[:japanese] = emoticon
-       end
-     end
-  end
   emoticons
 end
 
