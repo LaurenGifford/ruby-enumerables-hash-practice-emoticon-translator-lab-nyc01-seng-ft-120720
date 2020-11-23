@@ -3,10 +3,10 @@
 require 'pry'
 require "yaml"
 def load_library(path)
-  emoticons = {"get_meaning" => {}, "get_emoticon" => {}}
-  original = YAML.load_file(path)
+  feelings = {"get_meaning" => {}, "get_emoticon" => {}}
+  emoticons_original = YAML.load_file(path)
   binding.pry
-  original.each do |meaning, describe| 
+  emoticons_original.each do |meaning, describe| 
     emoticons[meaning] = describe
  #   binding.pry
       end
