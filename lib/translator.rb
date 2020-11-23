@@ -16,6 +16,9 @@ def load_library(path)
 end
 
 # hash = Hash[array.collect{|symbol| ["", symbol]}]
+
+#   emoji_hash["get_meaning"][emojis[1]] = word
+#   emoji_hash["get_emoticon"][emojis[0]] = emojis[1]
 #return ex 
 #emoticons = { emotion1 => {:english => translation, :japanese => translation}, emotion2 {}}
 
