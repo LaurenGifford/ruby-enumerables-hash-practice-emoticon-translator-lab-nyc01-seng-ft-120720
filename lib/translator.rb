@@ -3,8 +3,8 @@
 #require 'pry'
 require "yaml"
 def load_library(path)
-  emoticons = {"get_meaning" => {}, "get_emoticon" => {}}
   emoticons_lib = YAML.load_file(path)
+  emoticons = {"get_meaning" => {}, "get_emoticon" => {}}
   emoticons_lib.each do |meaning, emojis|
     eng, jap = emojis
     emoticons["get_meaning"][jap] = meaning
