@@ -10,7 +10,7 @@ def load_library(path)
     feelings["get_meaning"] = meaning
     feelings["get_emoticon"] = describe
  #  binding.pry
-   describe each do |emoticon|
+   describe.each do |emoticon|
      if emoticon == describe[0]
        describe[:english] = emoticon
        binding.pry
