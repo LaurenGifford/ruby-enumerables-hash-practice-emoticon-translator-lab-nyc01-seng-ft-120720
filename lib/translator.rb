@@ -31,11 +31,11 @@ end
 
 
 def get_japanese_emoticon(path, emoticon)
-  emoji = load_library
+  emoji = load_library(path)
   # code goes here
 end
 
 def get_english_meaning(path, emoticon)
-  YAML.load_file(path)
+  emoji = load_library(path)
   # code goes here
 end
