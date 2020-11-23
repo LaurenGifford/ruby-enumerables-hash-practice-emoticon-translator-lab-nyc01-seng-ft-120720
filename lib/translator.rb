@@ -13,9 +13,9 @@ def load_library(path)
     emoticons[meaning] = {:english => emojis[0], :japanese => emojis[1]}
     emoticons["get_meaning"][japanese] = meaning
     emoticons["get_emoticon"][english] = japanese
-    binding.pry
-   end
 #    binding.pry
+   end
+    binding.pry
   return emoticons
 end
 
