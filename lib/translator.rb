@@ -4,13 +4,10 @@ require 'pry'
 require "yaml"
 def load_library(path)
   emoticons_lib = YAML.load_file(path)
-  emoticons = {}
+  emoticons = {"get_meaning" => {}, "get_emoticon" => {}}
   emoticons_lib.each do |meaning, emojis|
-    emoticons[meaning] = {:english => emojis[0], :japanese => emojis[1]}
-     end
-  "get_meaning" = emoticons[meaning][:english]
-  "get_emoticon" = emoticons[meaning][:japanese]
-  
+    emoticons["get_meaning"][meaning] = {:english => emojis[0], :japanese => emojis[1]}
+   end
     binding.pry
   return emoticons
 end
