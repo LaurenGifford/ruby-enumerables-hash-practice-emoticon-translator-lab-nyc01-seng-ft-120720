@@ -5,11 +5,9 @@ require "yaml"
 def load_library(path)
   emoticons = {"get_meaning" => {}, "get_emoticon" => {}}
   emoticons_lib = YAML.load_file(path)
-  emoticons_lib.each do |meaning, emojis| 
-    english = emojis[0]
-    japanese = emojis[1]
-    emoticons["get_meaning"][japanese] = meaning
-    emoticons["get_emoticon"][english] = japanese
+  emoticons_lib.each do |meaning, emojis|
+    emoticons["get_meaning"][emojis[1]] = meaning
+    emoticons["get_emoticon"][emojis[0]] = japanese
      end
  #    binding.pry
   emoticons
